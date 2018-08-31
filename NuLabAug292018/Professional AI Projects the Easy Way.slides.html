@@ -12566,7 +12566,7 @@ Automated data entry</code></pre>
 </div>
 </div>
 
-</div></div></section><section>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12823,7 +12823,7 @@ Name: label, dtype: int64</pre>
 </div>
 </div>
 
-</div></div></section><section>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12872,7 +12872,7 @@ Name: label, dtype: int64</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Using-our-model-to-label-our-test-dataset">Using our model to label our test dataset<a class="anchor-link" href="#Using-our-model-to-label-our-test-dataset">&#182;</a></h2>
+<h2 id="Verifying-our-model's-accuracy-with-our-test">Verifying our model's accuracy with our test<a class="anchor-link" href="#Verifying-our-model's-accuracy-with-our-test">&#182;</a></h2>
 </div>
 </div>
 </div></section><section>
@@ -12891,19 +12891,101 @@ Name: label, dtype: int64</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Deploying-the-model-for-use">Deploying the model for use<a class="anchor-link" href="#Deploying-the-model-for-use">&#182;</a></h2>
+<h2 id="Predicting-a-separate-set-of-images-that-we-want-to-label">Predicting a separate set of images that we want to label<a class="anchor-link" href="#Predicting-a-separate-set-of-images-that-we-want-to-label">&#182;</a></h2>
 </div>
 </div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><img src="imgs/EPTM._Zip-Paneled_Drawstring_Hoodieimg_00000001.jpg" alt="img5"> </li>
+<li><img src="imgs/Soft_Pleated_Skater_Dressimg_00000001.jpg" alt="img5"> </li>
+</ul>
+
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Predicting-these-sets-of-images">Predicting these sets of images<a class="anchor-link" href="#Predicting-these-sets-of-images">&#182;</a></h4>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="imgs/mlprediction.png" alt="img5"></p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Applying-the-model-programmatically">Applying the model programmatically<a class="anchor-link" href="#Applying-the-model-programmatically">&#182;</a></h2>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Via-API---https://cloud.google.com/vision/automl/docs/tutorial">Via API - <a href="https://cloud.google.com/vision/automl/docs/tutorial">https://cloud.google.com/vision/automl/docs/tutorial</a><a class="anchor-link" href="#Via-API---https://cloud.google.com/vision/automl/docs/tutorial">&#182;</a></h3><ul>
+<li>Import DataSet</li>
+<li>Create Model</li>
+<li>Train Model</li>
+<li>Evaluate Model</li>
+<li>Use Model for Prediction</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">google.cloud</span> <span class="k">import</span> <span class="n">automl_v1beta1</span> <span class="k">as</span> <span class="n">automl</span>
+
+<span class="n">automl_client</span> <span class="o">=</span> <span class="n">automl</span><span class="o">.</span><span class="n">AutoMlClient</span><span class="p">()</span>
+
+<span class="c1"># Get the full path of the model.</span>
+<span class="n">model_full_id</span> <span class="o">=</span> <span class="n">automl_client</span><span class="o">.</span><span class="n">model_path</span><span class="p">(</span>
+    <span class="n">project_id</span><span class="p">,</span> <span class="n">compute_region</span><span class="p">,</span> <span class="n">model_id</span>
+<span class="p">)</span>
+
+<span class="c1"># Create client for prediction service.</span>
+<span class="n">prediction_client</span> <span class="o">=</span> <span class="n">automl</span><span class="o">.</span><span class="n">PredictionServiceClient</span><span class="p">()</span>
+
+<span class="c1"># Read the image and assign to payload.</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">image_file</span><span class="p">:</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">image_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;image_bytes&quot;</span><span class="p">:</span> <span class="n">content</span><span class="p">}}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">prediction_client</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">model_full_id</span><span class="p">,</span> <span class="n">payload</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">payload</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Predicted class name: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">display_name</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Predicted class score: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">classification</span><span class="o">.</span><span class="n">score</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Some-ending-notes">Some ending notes<a class="anchor-link" href="#Some-ending-notes">&#182;</a></h3>
-<pre><code>This does not make Data Scientists or programmers redundant.
-This frees up a lot of the guess work that data scientists usually have to do.
-Data Scientists and developers are still required to optimize, implement and design products and processes.</code></pre>
-
+<h2 id="Questions?">Questions?<a class="anchor-link" href="#Questions?">&#182;</a></h2>
 </div>
 </div>
 </div></section></section>
