@@ -12003,7 +12003,7 @@ but what is practical?</code></pre>
 </div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">churn_data_know</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">to_html</span><span class="p">()))</span>
@@ -12146,7 +12146,7 @@ Label: Triangle Patterned Dolman Cardigan<br>
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fashion_images</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="s2">&quot;category_label&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fashion_images</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12183,52 +12183,36 @@ Label: Triangle Patterned Dolman Cardigan<br>
     <tr style="text-align: right;">
       <th></th>
       <th>image_name</th>
-      <th>category_label</th>
-      <th>label</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>img/Hooded_Cotton_Canvas_Anorak/img_00000037.jpg</td>
-      <td>1</td>
-      <td>Anorak</td>
+      <th>264473</th>
+      <td>img/Scoop_Back_Sheath_Dress/img_00000059.jpg</td>
     </tr>
     <tr>
-      <th>160</th>
-      <td>img/Tribal_Print_Linen_Blazer/img_00000030.jpg</td>
-      <td>2</td>
-      <td>Blazer</td>
+      <th>95129</th>
+      <td>img/Floral-Embroidered_Bomber_Jacket/img_00000...</td>
     </tr>
     <tr>
-      <th>7655</th>
-      <td>img/Lace-Paneled_Crepe_Blouse/img_00000022.jpg</td>
-      <td>3</td>
-      <td>Blouse</td>
+      <th>245187</th>
+      <td>img/Striped_Lace_Dress/img_00000064.jpg</td>
     </tr>
     <tr>
-      <th>32212</th>
-      <td>img/Zip_Collar_Bomber/img_00000136.jpg</td>
-      <td>4</td>
-      <td>Bomber</td>
+      <th>224478</th>
+      <td>img/Belted_Lace_Print_Dress/img_00000028.jpg</td>
     </tr>
     <tr>
-      <th>32521</th>
-      <td>img/Tartan_Plaid_Button-Down/img_00000044.jpg</td>
-      <td>5</td>
-      <td>Down</td>
+      <th>197871</th>
+      <td>img/Damask_Print_Leggings/img_00000056.jpg</td>
     </tr>
     <tr>
-      <th>32851</th>
-      <td>img/Hooded_Open-Front_Cardigan/img_00000043.jpg</td>
-      <td>6</td>
-      <td>Cardigan</td>
+      <th>141259</th>
+      <td>img/Miami_Heat_Athletic_Shorts/img_00000018.jpg</td>
     </tr>
     <tr>
-      <th>46162</th>
-      <td>img/Rustic_Plaid_Flannel/img_00000034.jpg</td>
-      <td>7</td>
-      <td>Flannel</td>
+      <th>181689</th>
+      <td>img/Pintucked_Woven_Shorts/img_00000009.jpg</td>
     </tr>
   </tbody>
 </table>
@@ -12358,7 +12342,7 @@ Automated data entry</code></pre>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fashion_images</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -12374,7 +12358,7 @@ Automated data entry</code></pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[5]:</div>
+<div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -12398,34 +12382,28 @@ Automated data entry</code></pre>
     <tr style="text-align: right;">
       <th></th>
       <th>image_name</th>
-      <th>category_label</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
       <td>img/Sheer_Pleated-Front_Blouse/img_00000001.jpg</td>
-      <td>3</td>
     </tr>
     <tr>
       <th>1</th>
       <td>img/Sheer_Pleated-Front_Blouse/img_00000002.jpg</td>
-      <td>3</td>
     </tr>
     <tr>
       <th>2</th>
       <td>img/Sheer_Pleated-Front_Blouse/img_00000003.jpg</td>
-      <td>3</td>
     </tr>
     <tr>
       <th>3</th>
       <td>img/Sheer_Pleated-Front_Blouse/img_00000004.jpg</td>
-      <td>3</td>
     </tr>
     <tr>
       <th>4</th>
       <td>img/Sheer_Pleated-Front_Blouse/img_00000005.jpg</td>
-      <td>3</td>
     </tr>
   </tbody>
 </table>
@@ -12440,7 +12418,7 @@ Automated data entry</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fashion_images</span><span class="o">.</span><span class="n">shape</span>
@@ -12456,13 +12434,13 @@ Automated data entry</code></pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[6]:</div>
+<div class="prompt output_prompt">Out[8]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(289222, 2)</pre>
+<pre>(289222, 1)</pre>
 </div>
 
 </div>
@@ -12489,7 +12467,7 @@ Automated data entry</code></pre>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">clean_image_name_fashion</span><span class="p">(</span><span class="n">description</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
@@ -12498,7 +12476,7 @@ Automated data entry</code></pre>
     <span class="k">return</span> <span class="n">item</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 
 <span class="n">fashion_images</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">fashion_images</span><span class="p">[</span><span class="s1">&#39;image_name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">clean_image_name_fashion</span><span class="p">)</span>
-<span class="n">fashion_images</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;category_label&quot;</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">fashion_images</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;label&quot;</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">fashion_images</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
@@ -12506,10 +12484,10 @@ Automated data entry</code></pre>
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fashion_images</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -12525,7 +12503,7 @@ Automated data entry</code></pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[9]:</div>
+<div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -12549,39 +12527,33 @@ Automated data entry</code></pre>
     <tr style="text-align: right;">
       <th></th>
       <th>image_name</th>
-      <th>category_label</th>
       <th>label</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>img/Hooded_Cotton_Canvas_Anorak/img_00000037.jpg</td>
-      <td>1</td>
+      <td>img/Hooded_Cotton_Canvas_Anorak/img_00000039.jpg</td>
       <td>Anorak</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>img/Hooded_Cotton_Canvas_Anorak/img_00000012.jpg</td>
-      <td>1</td>
+      <td>img/Hooded_Cotton_Canvas_Anorak/img_00000013.jpg</td>
       <td>Anorak</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>img/Hooded_Cotton_Canvas_Anorak/img_00000013.jpg</td>
-      <td>1</td>
+      <td>img/Hooded_Cotton_Canvas_Anorak/img_00000014.jpg</td>
       <td>Anorak</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>img/Hooded_Cotton_Canvas_Anorak/img_00000014.jpg</td>
-      <td>1</td>
+      <td>img/Hooded_Cotton_Canvas_Anorak/img_00000015.jpg</td>
       <td>Anorak</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>img/Hooded_Cotton_Canvas_Anorak/img_00000015.jpg</td>
-      <td>1</td>
+      <td>img/Hooded_Cotton_Canvas_Anorak/img_00000016.jpg</td>
       <td>Anorak</td>
     </tr>
   </tbody>
@@ -12619,41 +12591,63 @@ Test = 30%</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Google AutoML will handle Train, Test and Cross Validation for us automatically.</li>
+<li>Keep a test dataset to verify model accuracy after Training</li>
+<li>Separate Labels from data</li>
+</ul>
 
-<pre><code>Google AutoML will handle Train, Test and Cross Validation for us automatically.
-
-Keep a test dataset to verify model accuracy after Training
-
-Separate Labels from data</code></pre>
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Take 200 of each type for Training</li>
+<li>Take 60 of each for Testing</li>
+<li>Remove types where we do not have 260 of</li>
+</ul>
 
 </div>
 </div>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">random_samples</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">fashion_images</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fashion_training_data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">fashion_testing_data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">label</span><span class="p">,</span> <span class="n">have_enough_data</span> <span class="ow">in</span> <span class="p">(</span><span class="n">fashion_images</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">&gt;=</span><span class="mi">260</span><span class="p">)</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
+    
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">have_enough_data</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="c1"># Get the subset of that label</span>
     <span class="n">subset</span> <span class="o">=</span> <span class="n">fashion_images</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">fashion_images</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">label</span><span class="p">]</span>
-    <span class="n">max_sample</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">subset</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">200</span><span class="p">)</span>
-    <span class="n">random_samples</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">random_samples</span><span class="p">,</span> <span class="n">subset</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">max_sample</span><span class="p">)])</span> 
-    <span class="c1"># Take a sample without replacement</span>
+    <span class="c1"># Takes 260 samples</span>
+    <span class="n">random_samples</span> <span class="o">=</span> <span class="n">subset</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">260</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="c1"># Puts first 200 into fashion_training_data</span>
+    <span class="n">fashion_training_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random_samples</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">200</span><span class="p">])</span>
+    <span class="c1"># Puts last 60 into fashion_testing_data</span>
+    <span class="n">fashion_testing_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random_samples</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">200</span><span class="p">:</span><span class="mi">260</span><span class="p">])</span>
+    
+<span class="n">fashion_training_data_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">fashion_training_data</span><span class="p">)</span>
+<span class="n">fashion_testing_data_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">fashion_testing_data</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-</div>
+</div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[80]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">random_samples</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">random_samples</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fashion_training_data_df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -12666,58 +12660,111 @@ Separate Labels from data</code></pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[80]:</div>
+<div class="prompt output_prompt">Out[12]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>Tee            200
+<pre>6600</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fashion_testing_data_df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[13]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1980</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fashion_training_data_df</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[14]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Poncho         200
 Cutoffs        200
-Sweater        200
-Henley         200
-Sweatshorts    200
-Parka          200
-Down           200
 Blazer         200
-Top            200
-Sweatpants     200
-Blouse         200
-Bomber         200
-Jersey         200
-Skirt          200
-Kimono         200
-Shorts         200
-Cardigan       200
-Trunks         200
-Poncho         200
-Tank           200
-Leggings       200
+Joggers        200
 Jumpsuit       200
+Sweatpants     200
+Cardigan       200
+Tee            200
+Down           200
+Culottes       200
+Shorts         200
+Sweatshorts    200
+Romper         200
+Flannel        200
+Jersey         200
 Jeans          200
 Chinos         200
-Jacket         200
-Romper         200
+Skirt          200
+Bomber         200
+Top            200
+Leggings       200
+Sweater        200
 Dress          200
-Culottes       200
-Jeggings       200
-Flannel        200
-Hoodie         200
-Joggers        200
+Blouse         200
 Coat           200
-Anorak         160
-Robe           150
-Turtleneck     146
-Kaftan         126
-Peacoat         97
-Capris          77
-Onesie          70
-Caftan          54
-Gauchos         49
-Jodhpurs        45
-Sarong          32
-Coverup         17
-Halter          17
+Jacket         200
+Trunks         200
+Parka          200
+Hoodie         200
+Tank           200
+Henley         200
+Kimono         200
+Jeggings       200
 Name: label, dtype: int64</pre>
 </div>
 
@@ -12727,50 +12774,20 @@ Name: label, dtype: int64</pre>
 </div>
 
 </div></div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[81]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">random_samples</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[81]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>7640</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Copy-Files-Into-different-subfolders">Copy Files Into different subfolders<a class="anchor-link" href="#Copy-Files-Into-different-subfolders">&#182;</a></h3>
+<h3 id="Copy-Files-Into-different-subfolders">Copy Files Into different subfolders<a class="anchor-link" href="#Copy-Files-Into-different-subfolders">&#182;</a></h3><ul>
+<li>To send training data into Google AutoML Vision</li>
+</ul>
+
 </div>
 </div>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[82]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
@@ -12784,20 +12801,20 @@ Name: label, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[84]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s2">&quot;../../data/image_classification/samples&quot;</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s2">&quot;/mnt/HardDrive/dataset/fashion_img_samples&quot;</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">FileExistsError</span><span class="p">:</span>
     <span class="k">pass</span>
 
-<span class="k">for</span> <span class="n">image_number</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">random_samples</span><span class="o">.</span><span class="n">itertuples</span><span class="p">()):</span>
-    <span class="n">folder_name</span> <span class="o">=</span> <span class="s2">&quot;../../data/image_classification/samples/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">label</span><span class="p">)</span> 
+<span class="k">for</span> <span class="n">image_number</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">fashion_training_data_df</span><span class="o">.</span><span class="n">itertuples</span><span class="p">()):</span>
+    <span class="n">folder_name</span> <span class="o">=</span> <span class="s2">&quot;/mnt/HardDrive/dataset/fashion_img_samples/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">label</span><span class="p">)</span> 
     <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">folder_name</span><span class="p">):</span>
         <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">folder_name</span><span class="p">)</span>
-    <span class="n">source_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s2">&quot;../../data/image_classification/data/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">image_name</span><span class="p">))</span>
-    <span class="n">destination_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s2">&quot;../../data/image_classification/samples/</span><span class="si">{}</span><span class="s2">/img_</span><span class="si">{}</span><span class="s2">.jpg&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">image_number</span><span class="p">)))</span>
+    <span class="n">source_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s2">&quot;/mnt/HardDrive/dataset/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">image_name</span><span class="p">))</span>
+    <span class="n">destination_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s2">&quot;/mnt/HardDrive/dataset/fashion_img_samples/</span><span class="si">{}</span><span class="s2">/img_</span><span class="si">{}</span><span class="s2">.jpg&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">image_number</span><span class="p">)))</span>
     <span class="c1"># Move the file here</span>
     <span class="n">shutil</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">source_file</span><span class="p">,</span> <span class="n">destination_file</span><span class="p">)</span>
 </pre></div>
@@ -12811,7 +12828,7 @@ Name: label, dtype: int64</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="imgs/GoogleAutoML5.png" alt="img"></p>
+<p><img src="imgs/GoogleAutoML5a.png" alt="img"></p>
 
 </div>
 </div>
@@ -12848,6 +12865,33 @@ Name: label, dtype: int64</pre>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><img src="imgs/GoogleAutoML8.png" alt="img"></p>
 
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Using-our-model-to-label-our-test-dataset">Using our model to label our test dataset<a class="anchor-link" href="#Using-our-model-to-label-our-test-dataset">&#182;</a></h2>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="What-is-the-accuracy?">What is the accuracy?<a class="anchor-link" href="#What-is-the-accuracy?">&#182;</a></h3><ul>
+<li>We compare the prediction with our answers</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Deploying-the-model-for-use">Deploying the model for use<a class="anchor-link" href="#Deploying-the-model-for-use">&#182;</a></h2>
 </div>
 </div>
 </div></section></section><section><section>
